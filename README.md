@@ -4,22 +4,21 @@
 # KNOTIFY 🎯
 
 ## Basic Details
-### Team Name: HeartSafe Matchmakers
+Our matrimonial platform offers the perfect blend of tradition and trust, where matches are built not only on compatibility but also on health transparency
+
+### Team Name: Binary Bandits
 
 ### Team Members
-- Team Lead: Ponnu 🥰 - [College Name]
-- Member 2: [Name] - [College Name]
-- Member 3: [Name] - [College Name]
+- Team Lead: Linta Babu - Viswajyothi College of Engineering and Technology Vazhakkulam
+- Member 2: Biya Shibu - Viswajyothi College of Engineering and Technology Vazhakkulam
+- Member 3: Keerthana K Anil - Viswajyothi College of Engineering and Technology Vazhakkulam
 
 ### Project Description
-Knotify is a unique matrimonial platform that blends tradition with health awareness. Users provide essential premarital test results to ensure transparency in compatibility and safety. Personal details and test results are only visible with user consent, preserving privacy.
-
+This is a matrimonial platform that combines tradition with a health-conscious approach. Alongside profiles, users provide essential premarital test results such as STD screenings and blood compatibility to promote transparent, informed matches. Importantly, test results and personal details are accessible only with user consent, ensuring privacy and control. This health-first platform empowers families to make safe, responsible choices for a harmonious future.
 ### The Problem (that doesn't exist)
-In India, where arranged marriages are popular, there’s a *gap* in health transparency for safe and compatible matches!
-
+Approximately 140 million women face complications during pregnancy due to Rh factor incompatibility, and around 70 million people may have an STD at any given time.In India, where arranged marriages are common, ensuring safety is paramount. But how?
 ### The Solution (that nobody asked for)
-We're combining romance with real talk about blood compatibility and health screenings—because what’s more romantic than transparency in love and health?
-
+Our website prioritizes health and compatibility by requiring users to provide their Rh compatibility test and RPR test results, along with other essential details, with their consent. You can only view the test results and details after accepting the request. This approach fosters informed and safer matrimonial choices, ensuring a more secure foundation for relationships.
 ## Technical Details
 ### Technologies/Components Used
 For Software:
@@ -48,9 +47,13 @@ For Software:
 
 
 ![1](https://github.com/user-attachments/assets/c2bbf42b-ca65-4148-80c0-b8a58bda6504)
+Welcome to Knowtify. On our homepage, you will find a Register button that allows you to create your profile. Additionally, a Log In option will be available soon, enabling you to access updates and manage your account. Thank you for choosing Knowtify as your trusted matrimonial platform.
 ![2](https://github.com/user-attachments/assets/e32055af-2b07-424f-8135-6c1d56f5be86)
+Upon clicking the Register button, you will be directed to the registration form, where you can enter the necessary details, as well as your RPR test results and Rh compatibility results.
 ![3](https://github.com/user-attachments/assets/462b49a5-9a13-4747-9b30-5ce8b10ad5ca)
+Fill the form.This ensures that all essential information is captured for a thorough and informed matchmaking process.
 ![4](https://github.com/user-attachments/assets/8f59c6e1-957b-4f6a-ae84-6dc38f6a3d7a)
+You can send and accept requests to learn more about other users. Details will only be accessible once your request is accepted, ensuring privacy and confidentiality in your interactions.
 
 
 
@@ -60,9 +63,9 @@ For Software:
 
 
 ## Team Contributions
-- **Ponnu 🥰**: Designed core UI, implemented user registration and privacy controls
-- **[Name 2]**: Built profile interaction system, request and accept features
-- **[Name 3]**: Developed image handling and secure access logic
+- Linta Babu: Designed core UI, implemented user registration and privacy controls
+- Keerthana K Anil: Built profile interaction system, request and accept features
+- Biya Shibu: Developed image handling and secure access logic
 
 ---
 Made with ❤️ at TinkerHub Useless Projects 
