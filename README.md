@@ -27,9 +27,6 @@ For Software:
 - **Libraries**: None used
 - **Tools**: Browser-based interface, image handling for test results and profile pictures
 
-For Hardware:
-- **Components**: None required (web-based only)
-- **Specifications**: Compatible with desktop and mobile browsers
 
 ### Implementation
 For Software:
