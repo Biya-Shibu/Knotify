@@ -281,7 +281,7 @@
                 profession: "Engineer",
                 picture: "https://via.placeholder.com/100" // Placeholder for profile picture
             };
-            alert(Request sent to ${requestProfile.name}!);
+            alert(`Request sent to ${requestProfile.name}!`);
             displayRequestProfile(requestProfile);
         }
 
@@ -302,7 +302,7 @@
         }
 
         function acceptProfile(name) {
-            alert(${name}'s request accepted!);
+            alert(`${name}'s request accepted!`);
             acceptedProfiles.push({
                 name,
                 age: 28, // Example age
@@ -330,3 +330,4 @@
     </script>
 </body>
 </html>
+
