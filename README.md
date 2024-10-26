@@ -47,12 +47,19 @@ For Software:
 
 
 ![1](https://github.com/user-attachments/assets/c2bbf42b-ca65-4148-80c0-b8a58bda6504)
-Welcome to Knowtify. On our homepage, you will find a Register button that allows you to create your profile. Additionally, a Log In option will be available soon, enabling you to access updates and manage your account. Thank you for choosing Knowtify as your trusted matrimonial platform.
+
+Welcome to Knotify. On our homepage, you will find a Register button that allows you to create your profile. Additionally, a Log In option will be available soon, enabling you to access updates and manage your account. Thank you for choosing Knowtify as your trusted matrimonial platform.
+
 ![2](https://github.com/user-attachments/assets/e32055af-2b07-424f-8135-6c1d56f5be86)
+
 Upon clicking the Register button, you will be directed to the registration form, where you can enter the necessary details, as well as your RPR test results and Rh compatibility results.
+
 ![3](https://github.com/user-attachments/assets/462b49a5-9a13-4747-9b30-5ce8b10ad5ca)
+
 Fill the form.This ensures that all essential information is captured for a thorough and informed matchmaking process.
+
 ![4](https://github.com/user-attachments/assets/8f59c6e1-957b-4f6a-ae84-6dc38f6a3d7a)
+
 You can send and accept requests to learn more about other users. Details will only be accessible once your request is accepted, ensuring privacy and confidentiality in your interactions.
 
 
