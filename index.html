@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KNOTIFY</title>
+     
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(120deg, #f093fb, #f5576c);
+            background-image:url('abc.jpg');
+            height: 100vh;
+            color: #fff;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        h2 {
+            font-family: Script;
+        }
+        .register-btn {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 1rem;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        /* Registration Form */
+        #registrationForm {
+            display: none;
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #registrationForm label, 
+        #registrationForm input, 
+        #registrationForm select, 
+        #registrationForm button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+
+        .input-field {
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #profilePicture {
+            margin-bottom: 10px;
+        }
+
+        /* Profile Display */
+        #profileDisplay {
+            display: none;
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        #profilePicturePreview {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        /* Profile Interaction */
+        .profile-interaction {
+            margin-top: 20px;
+            display: none;
+        }
+
+        .request-btn, 
+        .accept-btn {
+            background-color: #6200ea;
+            color: #fff;
+            padding: 5px 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .request-btn {
+            background-color: #03a9f4;
+        }
+
+        /* Accepted Profiles */
+        #acceptedProfiles {
+            display: none;
+            margin-top: 20px;
+            background-color: #fff;
+            color: #333;
+            padding: 20px;
+            border-radius: 5px;
+            width: 300px;
+        }
+
+        .profile-card {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 80%;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="font-family:Script">KNOTIFY</h1>
+    <h2>Where finding the one is as safe as swiping right on mom-approved profiles!</h2>
+    <button class="register-btn" onclick="showRegistrationForm()">Register</button>
+
+    <!-- Registration Form -->
+    <div id="registrationForm">
+        <h2>Registration Form</h2>
+        <label for="name">Name:</label>
+        <input type="text" id="name" class="input-field" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" class="input-field" required>
+        
+        <label for="age">Age:</label>
+        <input type="number" id="age" class="input-field" required>
+        
+        <label for="profession">Profession:</label>
+        <input type="text" id="profession" class="input-field" required>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" class="input-field" required>
+            <option value="" disabled selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        
+        <label for="city">City:</label>
+        <input type="text" id="city" class="input-field" required>
+
+        <label for="profilePicture">Profile Picture:</label>
+        <input type="file" id="profilePicture" class="input-field" accept="image/*" onchange="previewImage(event)" required>
+        <img id="profilePicturePreview" style="display:none;"/>
+
+        <label for="rprTest">Upload RPR Test:</label>
+        <input type="file" id="rprTest" class="input-field" accept="image/*" required>
+
+        <label for="rhFactorTest">Upload Rh Factor Test:</label>
+        <input type="file" id="rhFactorTest" class="input-field" accept="image/*" required>
+
+        <button class="register-btn" onclick="registerUser()">Submit</button>
+    </div>
+
+    <!-- Profile Display -->
+    <div id="profileDisplay">
+        <h2>Your Profile</h2>
+        <img id="displayPicture" src="" alt="Profile Picture" style="width:100%; border-radius:5px; display:none;">
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Email:</strong> <span id="displayEmail"></span></p>
+        <p><strong>Age:</strong> <span id="displayAge"></span></p>
+        <p><strong>Profession:</strong> <span id="displayProfession"></span></p>
+        <p><strong>Gender:</strong> <span id="displayGender"></span></p>
+        <p><strong>City:</strong> <span id="displayCity"></span></p>
+    </div>
+
+    <!-- Profile Interaction -->
+    <div class="profile-interaction" id="profileInteraction">
+        <p>View profiles of people who might be interested in you.</p>
+        <button class="request-btn" onclick="sendRequest()">Send Request</button>
+        <button class="accept-btn" onclick="acceptRequest()">Accept Request</button>
+    </div>
+
+    <!-- Accepted Profiles Display -->
+    <div id="acceptedProfiles">
+        <h2>Accepted Profiles</h2>
+        <div id="profileList"></div>
+    </div>
+
+    <script>
+        let userProfile = null; // To hold user profile data
+        const acceptedProfiles = []; // To hold accepted profiles
+
+        function showRegistrationForm() {
+            document.getElementById('registrationForm').style.display = 'block';
+        }
+
+        function previewImage(event) {
+            const file = event.target.files[0];
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const img = document.getElementById('profilePicturePreview');
+                img.src = e.target.result;
+                img.style.display = 'block';
+            }
+            reader.readAsDataURL(file);
+        }
+
+        function registerUser() {
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const age = document.getElementById('age').value;
+            const profession = document.getElementById('profession').value;
+            const gender = document.getElementById('gender').value;
+            const city = document.getElementById('city').value;
+            const profilePicture = document.getElementById('profilePicture').files[0];
+            const rprTest = document.getElementById('rprTest').files[0];
+            const rhFactorTest = document.getElementById('rhFactorTest').files[0];
+
+            if (name && email && age && profession && gender && city && profilePicture && rprTest && rhFactorTest) {
+                alert('Registration successful!');
+
+                // Set profile display information
+                userProfile = { name, email, age, profession, gender, city, profilePicture, rprTest, rhFactorTest };
+                displayProfile(userProfile);
+
+                // Hide registration form and show profile display
+                document.getElementById('registrationForm').style.display = 'none';
+                document.getElementById('profileInteraction').style.display = 'block';
+            } else {
+                alert('Please fill out all fields.');
+            }
+        }
+
+        function displayProfile(profile) {
+            document.getElementById('displayName').innerText = profile.name;
+            document.getElementById('displayEmail').innerText = profile.email;
+            document.getElementById('displayAge').innerText = profile.age;
+            document.getElementById('displayProfession').innerText = profile.profession;
+            document.getElementById('displayGender').innerText = profile.gender;
+            document.getElementById('displayCity').innerText = profile.city;
+
+            // Display profile picture
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const displayPicture = document.getElementById('displayPicture');
+                displayPicture.src = e.target.result;
+                displayPicture.style.display = 'block';
+            }
+            reader.readAsDataURL(profile.profilePicture);
+
+            // Show the profile display section
+            document.getElementById('profileDisplay').style.display = 'block';
+        }
+
+        function sendRequest() {
+            const requestProfile = {
+                name: "Interested Person",
+                age: 28,
+                profession: "Engineer",
+                picture: "https://via.placeholder.com/100" // Placeholder for profile picture
+            };
+            alert(Request sent to ${requestProfile.name}!);
+            displayRequestProfile(requestProfile);
+        }
+
+        function displayRequestProfile(profile) {
+            const profileList = document.getElementById('profileList');
+            const profileCard = document.createElement('div');
+            profileCard.classList.add('profile-card');
+
+            profileCard.innerHTML = `
+                <img src="${profile.picture}" alt="${profile.name}">
+                <p><strong>Name:</strong> ${profile.name}</p>
+                <p><strong>Age:</strong> ${profile.age}</p>
+                <p><strong>Profession:</strong> ${profile.profession}</p>
+                <button onclick="acceptProfile('${profile.name}')">Accept</button>
+            `;
+            profileList.appendChild(profileCard);
+            document.getElementById('acceptedProfiles').style.display = 'block';
+        }
+
+        function acceptProfile(name) {
+            alert(${name}'s request accepted!);
+            acceptedProfiles.push({
+                name,
+                age: 28, // Example age
+                profession: "Engineer", // Example profession
+                picture: "https://via.placeholder.com/100" // Placeholder for accepted profile picture
+            });
+            displayAcceptedProfiles();
+        }
+
+        function displayAcceptedProfiles() {
+            const profileList = document.getElementById('profileList');
+            profileList.innerHTML = ''; // Clear previous profiles
+            acceptedProfiles.forEach(profile => {
+                const profileCard = document.createElement('div');
+                profileCard.classList.add('profile-card');
+                profileCard.innerHTML = `
+                    <img src="${profile.picture}" alt="${profile.name}">
+                    <p><strong>Name:</strong> ${profile.name}</p>
+                    <p><strong>Age:</strong> ${profile.age}</p>
+                    <p><strong>Profession:</strong> ${profile.profession}</p>
+                `;
+                profileList.appendChild(profileCard);
+            });
+        }
+    </script>
+</body>
+</html>
