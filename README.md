@@ -18,7 +18,7 @@ This is a matrimonial platform that combines tradition with a health-conscious a
 ### The Problem (that doesn't exist)
 Approximately 140 million women face complications during pregnancy due to Rh factor incompatibility, and around 70 million people may have an STD at any given time.In India, where arranged marriages are common, ensuring safety is paramount. But how?
 ### The Solution (that nobody asked for)
-Our website prioritizes health and compatibility by requiring users to provide their Rh compatibility test and RPR test results, along with other essential details, with their consent. You can only view the test results and details after accepting the request. This approach fosters informed and safer matrimonial choices, ensuring a more secure foundation for relationships.
+Our website prioritizes health and compatibility by requiring users to provide their Rh compatibility test and RPR test results, along with other essential details, with their consent. Profiles will be displayed based on Rh compatibility to ensure alignment with the respective user's profile, promoting both safety and informed matching on our platform.You can only view the test results and details after accepting the request. This approach fosters informed and safer matrimonial choices, ensuring a more secure foundation for relationships.
 ## Technical Details
 ### Technologies/Components Used
 For Software:
